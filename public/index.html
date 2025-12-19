@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serverless Doc Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📄 DocConverter</h1>
+            <p>Konversi dokumen aman & cepat dengan Cloudflare</p>
+        </header>
+
+        <main class="card">
+            <div class="upload-area" id="dropZone">
+                <input type="file" id="fileInput" hidden>
+                <div class="icon">☁️</div>
+                <p>Klik untuk pilih file atau drag & drop disini</p>
+                <span id="fileName">Belum ada file dipilih</span>
+            </div>
+
+            <button id="convertBtn" disabled>Konversi Sekarang</button>
+
+            <div id="statusMessage" class="status hidden"></div>
+            <div id="downloadArea" class="hidden">
+                <a id="downloadLink" href="#" class="btn-download">⬇️ Download Hasil</a>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
