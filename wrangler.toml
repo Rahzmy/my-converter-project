@@ -1,12 +1,14 @@
-name = "doc-converter"
+name = "rizzconvert"  # <-- PERBAIKAN 1: Nama disesuaikan dengan log error Anda
 main = "src/index.js"
 compatibility_date = "2024-01-01"
 
-# Binding ke R2 Bucket (Pastikan bucket 'doc-convert-bucket' sudah dibuat)
+# Binding R2 Bucket
 [[r2_buckets]]
 binding = "MY_BUCKET"
 bucket_name = "doc-convert-bucket"
 
+# <-- PERBAIKAN 2: Menambahkan fallthrough = false agar error hilang
 [[rules]]
 type = "Text"
 globs = ["**/*.html", "**/*.css", "**/*.js"]
+fallthrough = false
