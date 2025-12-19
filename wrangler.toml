@@ -6,3 +6,7 @@ compatibility_date = "2024-01-01"
 [[r2_buckets]]
 binding = "MY_BUCKET"
 bucket_name = "doc-convert-bucket"
+
+[[rules]]
+type = "Text"
+globs = ["**/*.html", "**/*.css", "**/*.js"]
